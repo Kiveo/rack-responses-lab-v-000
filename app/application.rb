@@ -5,7 +5,8 @@ class Application
   def call(env)
     resp = Rack::Response.new
 
-    Time.new.hour > 1200 ? (resp.write "Good Morning!") : (resp.write "Good Afternoon!")
+    current_hour = Time.new.hour 
+    current_hour > 1200 ? (resp.write "Good Morning!") : (resp.write "Good Afternoon!")
 
     resp.finish
   end
