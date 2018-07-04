@@ -7,7 +7,7 @@ class Application
 
     current_hour = Time.new.hour
 
-    if current_hour > 5
+    if current_hour > 12
       resp.write "Good Afternoon!"
     else
       resp.write "Good Morning!"
