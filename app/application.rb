@@ -8,9 +8,9 @@ class Application
     current_hour = Time.new.hour
 
     if current_hour > 1200
-      (resp.write "Good Afternoon!")
+      resp.write "Good Afternoon!"
     else
-      (resp.write "Good Morning!")
+      resp.write "Good Morning!"
     end
 
     resp.finish
