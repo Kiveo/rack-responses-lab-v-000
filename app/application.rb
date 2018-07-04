@@ -7,12 +7,12 @@ class Application
 
     current_hour = Time.now.hour
 
-    if current_hour > 12
-      resp.write "Good Afternoon!"
-    else
-      resp.write "Good Morning!"
-    end
-
+    # if current_hour > 12
+    #   resp.write "Good Afternoon!"
+    # else
+    #   resp.write "Good Morning!"
+    # end
+    Time.now.hour < 12 ? "Good Morning!" : "Good Afternoon!"
     resp.finish
   end
 
