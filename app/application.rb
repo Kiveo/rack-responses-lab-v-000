@@ -12,7 +12,7 @@ class Application
     # else
     #   resp.write "Good Morning!"
     # end
-    Time.now.hour < 12 ? "Good Morning!" : "Good Afternoon!"
+    Time.now.hour < 12 ? resp.write "Good Morning!" : resp.write "Good Afternoon!"
     resp.finish
   end
 
