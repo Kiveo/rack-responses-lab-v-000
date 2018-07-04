@@ -6,7 +6,12 @@ class Application
     resp = Rack::Response.new
 
     current_hour = Time.new.hour
-    (current_hour > 1200) ? (resp.write "Good Afternoon!") : (resp.write "Good Morning!")
+
+    if current_hour > 1200
+      (resp.write "Good Afternoon!")
+    else
+      (resp.write "Good Morning!")
+    end
 
     resp.finish
   end
